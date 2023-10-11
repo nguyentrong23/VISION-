@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ad2e19f-e075-4be7-a6e9-b1bce4584d2c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/canny.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rotate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Vision.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Vision.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QR_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/QR_detect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tets_cam_phone.py" beforeDir="false" afterPath="$PROJECT_DIR$/tets_cam_phone.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canny.py" beforeDir="false" afterPath="$PROJECT_DIR$/canny.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex1.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,15 +34,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/HPR/OneDrive/data/Vision",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HPR/OneDrive/data/Vision&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\HPR\OneDrive\data\Vision" />

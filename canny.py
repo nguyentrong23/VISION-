@@ -1,14 +1,24 @@
 import cv2
-import  numpy
-import  imutils
+import numpy as np
+image = cv2.imread('tets.png')
+gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+blurred = cv2.GaussianBlur(image, (5, 5), 0)
+cv2.imshow('blurred', blurred)
 
-img = cv2.imread("data/data_shape.png")
-# b1 convert ve anh xam
-grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-edges = cv2.Canny(grey,threshold1=100,threshold2=200)
-cv2.imshow("bien",edges)
-cv2.waitKey()
-if cv2.waitKey(1) & 0xFF == ord('q'):
-    cv2.destroyAllWindows()
+edges = cv2.Canny(blurred, 100, 150)
+kernel = np.array([[0, -1, 0], [-1, 5,-1], [0, -1, 0]])
+filtered_image = cv2.filter2D(image, -1, kernel)
+cv2.imshow('filtered_image', filtered_image)
+
+kernel = np.ones((5,5),np.uint8)
+dilation = cv2.dilate(edges,kernel,iterations = 1)
+erosion = cv2.erode(edges,kernel,iterations = 1)
+alpha = 1.5  # độ tương phản
+beta = 30   # độ sáng
+adjusted = cv2.convertScaleAbs(image, alpha=alpha, beta=beta)
+cv2.imshow('Processed Image', adjusted)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+#cv2.imwrite('ten_file_ket_qua.jpg', adjusted)
 
 
