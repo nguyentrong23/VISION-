@@ -5,45 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ad2e19f-e075-4be7-a6e9-b1bce4584d2c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/listmethod.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/detect_shape.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/number_detect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/object_detect_arduino.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template_matching.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template_matching_base_edges.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_23.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_24.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_26.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_28.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_29.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_30.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_31.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_set_1_9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_shape.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/data_shape.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/tets_face.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/template.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/template.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/detect_shape.py" beforeDir="false" afterPath="$PROJECT_DIR$/detect_shape.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_opencv" beforeDir="false" afterPath="$PROJECT_DIR$/example_opencv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/bai01.py" beforeDir="false" afterPath="$PROJECT_DIR$/example_opencv/crop_img.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/bai02.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/bai03.py" beforeDir="false" />
@@ -53,7 +20,7 @@
       <change beforePath="$PROJECT_DIR$/example_opencv/faces/1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/media/haarcascade_frontalface_default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/media/sample.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tets.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rotate.py" beforeDir="false" afterPath="$PROJECT_DIR$/rotate.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,8 +62,8 @@
       <recent name="C:\Users\HPR\OneDrive\data\Vision" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.detect_shape">
-    <configuration name="canny" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.template_matching_base_edges">
+    <configuration name="affine_transformation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -104,32 +71,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/canny.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="detect_face" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Vision" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detect_face.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/affine_transformation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,27 +105,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="object_detect_arduino" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Vision" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/object_detect_arduino.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="rotate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -201,13 +126,55 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="template_matching" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Vision" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/template_matching.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="template_matching_base_edges" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Vision" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/template_matching_base_edges.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.detect_shape" />
-        <item itemvalue="Python.object_detect_arduino" />
+        <item itemvalue="Python.template_matching_base_edges" />
+        <item itemvalue="Python.template_matching" />
+        <item itemvalue="Python.affine_transformation" />
         <item itemvalue="Python.rotate" />
-        <item itemvalue="Python.detect_face" />
-        <item itemvalue="Python.canny" />
+        <item itemvalue="Python.detect_shape" />
       </list>
     </recent_temporary>
   </component>
