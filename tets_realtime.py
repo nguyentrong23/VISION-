@@ -6,8 +6,7 @@ import imutils as imu
 cap = cv2.VideoCapture(0)
 sr1= cv2.imread("data/bluepill.jpg")
 img_template = cv2.cvtColor(sr1,cv2.COLOR_BGR2GRAY)
-blurred = cv2.GaussianBlur(img_template, (3,3), 0)
-img_template = cv2.Canny(blurred, 100, 150)
+
 # list method co the dung khi matching template eval(cv2.TM_CCOEFF),eval(cv2.TM_CCORR_NORMED),eval(cv2.TM_CCORR),eval(cv2.TM_SQDIFF),cv2.TM_SQDIFF_NORMED
 method = eval("cv2.TM_CCOEFF_NORMED")
 h, w = img_template.shape[::]
@@ -18,15 +17,12 @@ while 1:
     threshold = 0.4
     ret, frame = cap.read()
     img_src = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    blurred = cv2.GaussianBlur(img_src, (3, 3), 0)
-    img_src = cv2.Canny(blurred, 100, 150)
     # resolve angel problem
     for i in range(0,181,1):
         template = imu.rotate(img_template,i)
         res = cv2.matchTemplate(img_src, template, method)
         # xác dịnh tọa độ và vẽ khung cho template trên ảnh
         minval, maxval, minloc, maxloc = cv2.minMaxLoc(res)
-        print(maxval)
         if(maxval>=threshold):
             res_cop = res
             print(threshold,':',i)
