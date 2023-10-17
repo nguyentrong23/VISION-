@@ -4,7 +4,7 @@ import imutils as imu
 import  math
 
 # doc anh va template
-sr0 = cv2.imread("data/bluepill_test.jpg")
+sr0 = cv2.imread("data/bluepill.jpg")
 img_template = cv2.cvtColor(sr0,cv2.COLOR_BGR2GRAY)
 direc = 0.1
 # sr1= cv2.imread("data/data_shape.png")
@@ -76,11 +76,11 @@ for i in range(0,size[0]-1,1):
             nmsEdges[i][j] = mag_matrix[i][j]/maxgradient*255
 
 # phân ngưỡng threshold
-ret, nmsEdges = cv2.threshold( nmsEdges, 100, 120, cv2.THRESH_BINARY)
+ret, nmsEdges = cv2.threshold( nmsEdges, 100, 140, cv2.THRESH_BINARY)
 
 
 
-nmsEdges = cv2.resize(nmsEdges,(200,200))
+nmsEdges = cv2.resize(nmsEdges,(100,200))
 cv2.imshow('template_edge',nmsEdges)
 cv2.waitKey(0)
 cv2. destroyAllWindows
