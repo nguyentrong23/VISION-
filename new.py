@@ -1,46 +1,87 @@
 import cv2
 import numpy as np
 import imutils as imu
+import  math
+
 
 # doc anh va template
-cap = cv2.VideoCapture(0)
-sr1= cv2.imread("data/template_cam.png")
-img_template = cv2.cvtColor(sr1,cv2.COLOR_BGR2GRAY)
-blurred = cv2.GaussianBlur(img_template, (3,3), 0)
-img_template = cv2.Canny(blurred, 0,50)
-# list method co the dung khi matching template eval(cv2.TM_CCOEFF),eval(cv2.TM_CCORR_NORMED),eval(cv2.TM_CCORR),eval(cv2.TM_SQDIFF),cv2.TM_SQDIFF_NORMED
-method = eval("cv2.TM_CCOEFF_NORMED")
-h, w = img_template.shape[::]
-topleft = [0,0]
-cv2.imshow("template",img_template)
+sr0 = cv2.imread("data/template.png")
+img_template = cv2.cvtColor(sr0,cv2.COLOR_BGR2GRAY)
+direc = 0.1
+# sr1= cv2.imread("data/data_shape.png")
+# img_src = cv2.cvtColor(sr1,cv2.COLOR_BGR2GRAY)
+size = sr0.shape[::]
 
-while 1:
-    threshold = 0.4
-    ret, frame = cap.read()
-    img_src = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    blurred = cv2.GaussianBlur(img_src, (3, 3), 0)
-    img_src = cv2.Canny(blurred, 0, 50)
+# bộ lọc sobel
+gradient_x = cv2.Sobel(img_template, cv2.CV_64F, 1, 0, ksize=3)
+gradient_x = np.abs(gradient_x)
 
-    # resolve angel problem
-    for i in range(0,181,1):
-        template = imu.rotate(img_template,i)
-        res = cv2.matchTemplate(img_src, template, method)
-        # xác dịnh tọa độ và vẽ khung cho template trên ảnh
-        minval, maxval, minloc, maxloc = cv2.minMaxLoc(res)
-        if(maxval>=threshold):
-            res_cop = res
-            print(threshold,':',i)
-            threshold = maxval
-            topleft = maxloc
+gradient_y = cv2.Sobel(img_template, cv2.CV_64F, 0, 1, ksize=3)
+gradient_y = np.abs(gradient_y)
 
-#     de ve hinh chu nhat thi can biet toa do 2 goc cheo
-    print(maxval)
-    bottomright= (topleft[0]+w,topleft[1]+h)
-    cv2.rectangle(frame,topleft,bottomright,(0,255,255),1)
-    cv2.imshow("img_src", img_src)
-    cv2.imshow("dectect",frame)
-    key = cv2.waitKey(1)
-    if key == 27:
-        break
-cap.release()  # giải phóng camera
-cv2.destroyAllWindows()
+
+# tạo các ma trận
+nmsEdges = np.zeros_like(gradient_x)
+mag_matrix =np.zeros_like(gradient_x)
+direc_matrix =np.zeros_like(gradient_x)
+
+
+# tính toán độ lớn gradient và hướng
+for i in range(0,size[0],1):
+    for j in range(0,size[1],1):
+        sdx= gradient_x[i][j]
+        sdy = gradient_y[i][j]
+        mag= math.sqrt(sdx*sdx+sdy*sdy)
+        mag_matrix[i][j] = mag
+        direc = math.atan2(sdy,sdx) * 180/math.pi
+
+        if (( 0 < direc < 22.5) or (157.5< direc < 202.5)or (337.5< direc < 360)):
+                direc = 0
+        elif(( 22.5 < direc < 67.5)or(202.5 < direc < 247.5)):
+             direc = 45
+
+        elif( ( 67.5 < direc < 112.5)or(247.5 < direc < 292.5)):
+             direc = 90
+        elif((112.5 < direc < 157.5)or(292.5 < direc < 337.5)):
+             direc = 135
+        else:
+            direc = 0
+        direc_matrix[i][j] = direc
+
+# chuẩn hóa độ lớn gradient về giá trị 0-255
+mag_matrix = np.uint8( mag_matrix)
+maxgradient = np.max(mag_matrix)
+
+
+
+
+ # non maximum suppression
+
+for i in range(0,size[0]-1,1):
+    for j in range(0,size[1]-1,1):
+        if (direc_matrix[i][j]==0):
+            leftPixel = mag_matrix[i][j - 1]
+            rightPixel = mag_matrix[i][j + 1]
+        elif(direc_matrix[i][j]==45):
+            leftPixel = mag_matrix[i-1][j+1]
+            rightPixel = mag_matrix[i+1][j-1]
+        elif (direc_matrix[i][j] == 90):
+            leftPixel = mag_matrix[i-1][j]
+            rightPixel = mag_matrix[i+1][j]
+        else:
+            leftPixel = mag_matrix[i-1][j-1]
+            rightPixel = mag_matrix[i+1][j+1]
+        if (mag_matrix[i][j]<leftPixel or mag_matrix[i][j]<rightPixel):
+            nmsEdges[i][j] =0
+        else:
+            nmsEdges[i][j] = mag_matrix[i][j]/maxgradient*255
+
+# phân ngưỡng threshold
+ret, nmsEdges = cv2.threshold( nmsEdges, 120, 140, cv2.THRESH_BINARY)
+
+
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ thêm phần matching với source
+nmsEdges = cv2.resize(nmsEdges,(100,200))
+cv2.imshow('template_edge',nmsEdges)
+cv2.waitKey(0)
+cv2. destroyAllWindows
