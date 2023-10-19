@@ -1,26 +1,42 @@
 import cv2
-import numpy as np
 
-img = cv2.imread("data/sample-2-4.bmp")
+def generate_pyramid(image, levels):
+    pyramid = [image]
+    for i in range(levels - 1):
+        image = cv2.pyrDown(image)
+        pyramid.append(image)
+    return pyramid
 
-# Gaussian Pyramid
-layer = img.copy()
-gaussian_pyramid = [layer]
-for i in range(6):
-    layer = cv2.pyrDown(layer)
-    gaussian_pyramid.append(layer)
+def template_matching(pyramid, template):
+    max=0
+    max_l = (0,0)
+    max_level = 0
+    for level, img in enumerate(pyramid):
+        if img.shape[0] >= template.shape[0] and img.shape[1] >= template.shape[1]:
+            match = cv2.matchTemplate(img, template, cv2.TM_CCOEFF_NORMED)
+            minval, maxval, minloc, maxloc = cv2.minMaxLoc(match)
+            if(maxval>=max):
+                max = maxval
+                max_l = maxloc
+                max_level = level
+                print(max, ':', level)
 
-# Laplacian Pyramid
-layer = gaussian_pyramid[5]
-cv2.imshow("6", layer)
-laplacian_pyramid = [layer]
-for i in range(5, 0, -1):
-    size = (gaussian_pyramid[i-1].shape[1], gaussian_pyramid[i-1].shape[0])
-    gaussian_expanded = cv2.pyrUp(gaussian_pyramid[i], dstsize=size)
-    laplacian = cv2.subtract(gaussian_pyramid[i- 1], gaussian_expanded)
-    laplacian_pyramid.append(laplacian)
-    cv2.imshow(str(i), laplacian)
+    return pyramid[max_level], max_level, max_l
+# Load the image and template
+image = cv2.imread('data/sample-2-5.bmp', cv2.IMREAD_GRAYSCALE)
+template = cv2.imread('data/sample_for_template.bmp', cv2.IMREAD_GRAYSCALE)
+template = cv2.resize(template, (200, 100))
+h, w = template.shape[::]
+pyramid = generate_pyramid(image, levels=6)
 
-cv2.imshow("Original image", img)
+
+best_pyramid, max_level, max_loc = template_matching(pyramid, template)
+cv2.imshow('best pyramid scale ', best_pyramid)
+
+topleft = max_loc
+bottomright= (topleft[0]+w,topleft[1]+h)
+
+cv2.rectangle(best_pyramid,topleft,bottomright,(0,255,255),1)
+cv2.imshow('best pyramid scale ', best_pyramid)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

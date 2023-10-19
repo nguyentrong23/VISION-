@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ad2e19f-e075-4be7-a6e9-b1bce4584d2c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pyramid.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-3.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/sample-2-3.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-4.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/sample-2-4.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-6.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/sample-2-6.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample_for_template.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/sample_for_template.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv" beforeDir="false" afterPath="$PROJECT_DIR$/example_opencv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/bai01.py" beforeDir="false" afterPath="$PROJECT_DIR$/example_opencv/crop_img.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/bai02.py" beforeDir="false" />
@@ -21,11 +16,8 @@
       <change beforePath="$PROJECT_DIR$/example_opencv/faces/1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/media/haarcascade_frontalface_default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/media/sample.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new.py" beforeDir="false" afterPath="$PROJECT_DIR$/new.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotate.py" beforeDir="false" afterPath="$PROJECT_DIR$/rotate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_matching.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_matching.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_matching_base_edges.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_matching_base_edges.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_matching_nonlib.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_matching_nonlib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyramid.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyramid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +60,7 @@
       <recent name="C:\Users\HPR\OneDrive\data\Vision" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.pyramid">
+  <component name="RunManager" selected="Python.template_matching_base_edges">
     <configuration name="pyramid" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,8 +168,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.pyramid" />
         <item itemvalue="Python.template_matching_base_edges" />
+        <item itemvalue="Python.pyramid" />
         <item itemvalue="Python.template_matching" />
         <item itemvalue="Python.template_matching_nonlib" />
         <item itemvalue="Python.tets_realtime" />
