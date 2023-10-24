@@ -3,13 +3,13 @@ import numpy as np
 import imutils as imu
 
 # doc anh va template
-sr0 = cv2.imread("data/sample-2-3.bmp")
+sr0 = cv2.imread("data/sample_for_1.png")
 img_src = cv2.cvtColor(sr0,cv2.COLOR_BGR2GRAY)
 blurred = cv2.GaussianBlur(img_src, (3,3), 0)
 edges_src = cv2.Canny(blurred, 100, 150)
 
 
-sr1= cv2.imread("data/sample_for_template.bmp")
+sr1= cv2.imread("data/sample-for-tets.bmp")
 img_template = cv2.cvtColor(sr1,cv2.COLOR_BGR2GRAY)
 blurred = cv2.GaussianBlur(img_template, (3,3), 0)
 edges_template = cv2.Canny(blurred, 100, 150)
@@ -25,7 +25,7 @@ res_copy = np.zeros_like(edges_src)
 best_angel = 0
 edges_src_best = np.zeros_like(edges_src)
 # resolve angel problem
-for i in range(0,361,1):
+for i in range(0,360,1):
     edges_src_copy = imu.rotate(edges_src,i)
     res = cv2.matchTemplate(edges_src_copy,edges_template, method)
     # xác dịnh tọa độ và vẽ khung cho template trên ảnh

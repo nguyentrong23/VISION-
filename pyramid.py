@@ -1,42 +1,36 @@
 import cv2
+import numpy as np
 
-def generate_pyramid(image, levels):
-    pyramid = [image]
-    for i in range(levels - 1):
-        image = cv2.pyrDown(image)
-        pyramid.append(image)
-    return pyramid
+# Đọc ảnh gốc và template
+image = cv2.imread('data/sample-2-10.bmp', cv2.IMREAD_COLOR)
+template = cv2.imread('data/sample_for_template.bmp', cv2.IMREAD_COLOR)
 
-def template_matching(pyramid, template):
-    max=0
-    max_l = (0,0)
-    max_level = 0
-    for level, img in enumerate(pyramid):
-        if img.shape[0] >= template.shape[0] and img.shape[1] >= template.shape[1]:
-            match = cv2.matchTemplate(img, template, cv2.TM_CCOEFF_NORMED)
-            minval, maxval, minloc, maxloc = cv2.minMaxLoc(match)
-            if(maxval>=max):
-                max = maxval
-                max_l = maxloc
-                max_level = level
-                print(max, ':', level)
+# Khởi tạo tỷ lệ scale (0.8 có thể điều chỉnh)
+scale_factor = 0.8
+found = None
 
-    return pyramid[max_level], max_level, max_l
-# Load the image and template
-image = cv2.imread('data/sample-2-5.bmp', cv2.IMREAD_GRAYSCALE)
-template = cv2.imread('data/sample_for_template.bmp', cv2.IMREAD_GRAYSCALE)
-template = cv2.resize(template, (200, 100))
-h, w = template.shape[::]
-pyramid = generate_pyramid(image, levels=6)
+# Bắt đầu quá trình tìm kiếm với các tỷ lệ khác nhau
+for scale in np.linspace(0.2, 1.0, 20)[::-1]:
+    # Thay đổi kích thước template
+    resized_template = cv2.resize(template, (int(template.shape[1] * scale), int(template.shape[0] * scale)))
 
+    # Template Matching
+    result = cv2.matchTemplate(image, resized_template, cv2.TM_CCOEFF_NORMED)
+    (_, maxVal, _, maxLoc) = cv2.minMaxLoc(result)
 
-best_pyramid, max_level, max_loc = template_matching(pyramid, template)
-cv2.imshow('best pyramid scale ', best_pyramid)
+    # Lưu lại kết quả tốt nhất
+    if found is None or maxVal > found[0]:
+        found = (maxVal, maxLoc, scale)
 
-topleft = max_loc
-bottomright= (topleft[0]+w,topleft[1]+h)
+# Lấy thông tin kết quả
+(_, maxLoc, scale) = found
+startX, startY = int(maxLoc[0] / scale), int(maxLoc[1] / scale)
+endX, endY = int((maxLoc[0] + template.shape[1]) / scale), int((maxLoc[1] + template.shape[0]) / scale)
 
-cv2.rectangle(best_pyramid,topleft,bottomright,(0,255,255),1)
-cv2.imshow('best pyramid scale ', best_pyramid)
+# Vẽ hình chữ nhật bao quanh kết quả
+cv2.rectangle(image, (startX, startY), (endX, endY), (0, 255, 0), 2)
+
+# Hiển thị kết quả
+cv2.imshow('Result', image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

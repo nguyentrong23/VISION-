@@ -19,29 +19,29 @@ def create_double_matrix(height, width):
 def release_double_matrix(matrix):
     return None
 
-
-def find_geo_match_model(srcarr,template,lastMaxScores):
-    gradient_srcx, gradient_srcy = calculate_gradients(srcarr)
-    gradient_x, gradient_y = calculate_gradients(template)
-    mag_src,_ =compute_magnitude_direction(gradient_srcx,gradient_srcy)
-    mag_tem,_ = compute_magnitude_direction(gradient_x,gradient_y)
-    size_temp= mag_tem.shape
-    size_src = mag_src.shape
-    result = np.zeros_like(mag_src)
-    for i in range(1, size_src[0]):
-        for j in range(1, size_src[1]):
-            point =0
-            for n in range(1,size_temp[0]):
-                for m in range(1, size_temp[1]):
-                    point = point + (gradient_x[n][m]*gradient_srcx[i][j]+gradient_y[n][m]*gradient_srcy[i][j])/(mag_src[i][j] *mag_tem[n][m])
-                    # point =point +((gradient_x[n][m]*gradient_srcx[i][j]+gradient_y[n][m]*gradient_srcy[i][j])/(mag_src[i][j] *mag_tem[n][m]))
-            result[i][j] = point/(size_temp[0]*size_temp[1])
-            print(result[i][j])
-    return  result
-    for i in range(1, size_src[0]):
-        for j in range(1, size_src[1]):
-            print(mag_src[i][j])
-    return 1
+#
+# def find_geo_match_model(srcarr,template,lastMaxScores):
+#     gradient_srcx, gradient_srcy = calculate_gradients(srcarr)
+#     gradient_x, gradient_y = calculate_gradients(template)
+#     mag_src,_ =compute_magnitude_direction(gradient_srcx,gradient_srcy)
+#     mag_tem,_ = compute_magnitude_direction(gradient_x,gradient_y)
+#     size_temp= mag_tem.shape
+#     size_src = mag_src.shape
+#     result = np.zeros_like(mag_src)
+#     for i in range(1, size_src[0]):
+#         for j in range(1, size_src[1]):
+#             point =0
+#             for n in range(1,size_temp[0]):
+#                 for m in range(1, size_temp[1]):
+#                     point = point + (gradient_x[n][m]*gradient_srcx[i][j]+gradient_y[n][m]*gradient_srcy[i][j])/(mag_src[i][j] *mag_tem[n][m])
+#                     # point =point +((gradient_x[n][m]*gradient_srcx[i][j]+gradient_y[n][m]*gradient_srcy[i][j])/(mag_src[i][j] *mag_tem[n][m]))
+#             result[i][j] = point/(size_temp[0]*size_temp[1])
+#             print(result[i][j])
+#     return  result
+#     for i in range(1, size_src[0]):
+#         for j in range(1, size_src[1]):
+#             print(mag_src[i][j])
+#     return 1
 
 def calculate_gradients(img):
     gradient_x = cv2.Sobel(img, cv2.CV_64F, 1, 0, ksize=3)
@@ -98,20 +98,27 @@ def CreateGeoMatchModel(img_template):
 
 def main():
     global modelDefined, noOfCordinates, cordinates, edgeMagnitude, edgeDerivativeX, edgeDerivativeY, modelHeight, modelWidth, centerOfGravity
-
+    threshold = 0.0
     sr0 = cv2.imread("data/sample_for_template.bmp")
-    img_template = cv2.cvtColor(sr0, cv2.COLOR_BGR2GRAY)
+    sr0 = cv2.cvtColor(sr0, cv2.COLOR_BGR2GRAY)
+    sourc = CreateGeoMatchModel(sr0)
+    method = eval("cv2.TM_CCOEFF_NORMED")
+    sr1 = cv2.imread("data/sample-2-4.bmp")
+    sr1 = cv2.cvtColor(sr1, cv2.COLOR_BGR2GRAY)
+    template = CreateGeoMatchModel(sr1)
+    cv2.imshow('source',sourc)
+    cv2.imshow('template',template)
+    for i in range(0, 181, 1):
+        src_rotate = imu.rotate(sourc, i)
+        res = cv2.matchTemplate(src_rotate, template, method)
+        # xác dịnh tọa độ và vẽ khung cho template trên ảnh
+        minval, maxval, minloc, maxloc = cv2.minMaxLoc(res)
+        if (maxval >= threshold):
+            print(threshold, ':', i)
+            best = i
+            threshold = maxval
+            topleft = maxloc
 
-    nmsEdges = CreateGeoMatchModel(img_template)
-    cv2.imshow('temalte',nmsEdges)
-
-    #
-    # src = cv2.imread("data/data_shape.png")  # Hình ảnh nguồn (ảnh lớn)
-    # img_src = cv2.cvtColor(sr0, cv2.COLOR_BGR2GRAY)
-    #
-    # a = find_geo_match_model(img_src,img_template)
-    # #
-    # # print(a)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 if __name__ == "__main__":

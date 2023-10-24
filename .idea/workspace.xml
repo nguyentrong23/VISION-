@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1ad2e19f-e075-4be7-a6e9-b1bce4584d2c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sample-2-5.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/sample-2-5.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv" beforeDir="false" afterPath="$PROJECT_DIR$/example_opencv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/bai01.py" beforeDir="false" afterPath="$PROJECT_DIR$/example_opencv/crop_img.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/bai02.py" beforeDir="false" />
@@ -17,6 +18,9 @@
       <change beforePath="$PROJECT_DIR$/example_opencv/media/haarcascade_frontalface_default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/media/sample.mp4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pyramid.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyramid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_matching.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_matching.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_matching_base_edges.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_matching_base_edges.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_matching_nonlib.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_matching_nonlib.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +64,7 @@
       <recent name="C:\Users\HPR\OneDrive\data\Vision" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.template_matching_base_edges">
+  <component name="RunManager" selected="Python.template_matching_nonlib">
     <configuration name="pyramid" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -145,7 +149,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tets_realtime" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -157,7 +161,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tets_realtime.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.template_matching_base_edges" />
+        <item itemvalue="Python.template_matching_nonlib" />
         <item itemvalue="Python.pyramid" />
         <item itemvalue="Python.template_matching" />
-        <item itemvalue="Python.template_matching_nonlib" />
-        <item itemvalue="Python.tets_realtime" />
+        <item itemvalue="Python.template_matching_base_edges" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
