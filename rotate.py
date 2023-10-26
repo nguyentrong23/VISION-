@@ -3,8 +3,17 @@ import numpy as np
 import imutils as imu
 import math
 
-src = cv2.imread("data/data_shape.png")
-cv2.circle(src,(62,50), 50, (0,255,0),1)
-cv2.imshow('src', src)
+#  đọc  và tiền xử lý template
+sr1= cv2.imread("data/sample-for-tets.bmp")
+img_template = cv2.cvtColor(sr1,cv2.COLOR_BGR2GRAY)
+blurred = cv2.GaussianBlur(img_template, (3,3), 0)
+src = cv2.Canny(blurred, 100, 150)
+
+# Rotate src and mask by the same angle 'i'
+src = imu.rotate(src, 30)
+
+
+
+cv2.imshow('src',src)
 cv2.waitKey(0)
 cv2.destroyAllWindows()

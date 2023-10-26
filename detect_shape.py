@@ -1,7 +1,6 @@
 import cv2
 import  imutils as imu
 import numpy as np
-# su dung phuong phap matching template de xac dinh shape can tim
 # doc anh va template
 sr0 = cv2.imread("data/data_shape.png")
 img_src = cv2.cvtColor(sr0,cv2.COLOR_BGR2GRAY)
