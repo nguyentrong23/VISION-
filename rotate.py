@@ -6,12 +6,12 @@ import imutils
 import time
 
 def fit_angel_pca(contours, src):
-    min_area = 50000
+    min_area = 40000
     for idx,cnt in enumerate(contours):
         if cv2.contourArea(cnt) >= min_area:
             cv2.drawContours(src, [cnt], -1, (0, 255, 0), 2, cv2.LINE_AA)
-            print("index: ",idx)
-            data = cnt[:, 0, :].astype(np.floast32)
+            print("index: ",idx,'area: ',cv2.contourArea(cnt) )
+            data = contours[idx][:, 0, :].astype(np.float32)
             mean, eigenvectors = cv2.PCACompute(data, mean=None)
             angel = math.atan2(eigenvectors[0][1], eigenvectors[0][0]) * (180 / math.pi)
             # Tọa độ điểm mean (làm tròn)
@@ -30,12 +30,12 @@ def fit_angel_pca(contours, src):
     return mean, angel, src
 
 # Đọc ảnh và tiền xử lý source
-sr0 = cv2.imread("data/imgSrc/sample-5.bmp")
+sr0 = cv2.imread("data/imgSrc/sample-6.bmp")
 img_src = cv2.cvtColor(sr0, cv2.COLOR_BGR2GRAY)
 blurred = cv2.GaussianBlur(img_src, (3, 3), 0)
 _, edges_src = cv2.threshold(blurred, 100, 120, cv2.THRESH_BINARY_INV)
 # edges_src = cv2.Canny(edges_src, 120, 150)
-contours, _ = cv2.findContours(edges_src, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+contours, _ = cv2.findContours(edges_src, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE) # dùng cv2.CHAIN_APPROX_NONE để giữ nguyên tất cả các giá trị contours
 cv2.imshow("input for find",edges_src)
 
 #  đọc  và tiền xử lý template
