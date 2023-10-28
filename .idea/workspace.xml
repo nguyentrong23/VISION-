@@ -5,43 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ad2e19f-e075-4be7-a6e9-b1bce4584d2c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/test_pca.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/air.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/air_src.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bluepill.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bluepill_test.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/book_page.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/car.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/flipped_image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/flipped_tets.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/frame.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/listmethod.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/road.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-10.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-11.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-12.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-13.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-14.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-15.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-16.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-3.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-4.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-5.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-6.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-7.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-8.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-2-9.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample-for-tets.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample_for_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample_for_template.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/src_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/temp_best.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/template.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/template_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/detect_shape.py" beforeDir="false" afterPath="$PROJECT_DIR$/detect_shape.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/affine_transformation.py" beforeDir="false" afterPath="$PROJECT_DIR$/affine_transformation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-10.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/imgSrc/sample-1-10.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-4.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/imgSrc/sample-1-4.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-5.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/imgSrc/sample-1-5.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-6.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/imgSrc/sample-1-6.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-7.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/imgSrc/sample-1-7.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-8.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/imgSrc/sample-1-8.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-9.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/imgSrc/sample-1-9.bmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv" beforeDir="false" afterPath="$PROJECT_DIR$/example_opencv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/bai01.py" beforeDir="false" afterPath="$PROJECT_DIR$/example_opencv/crop_img.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/bai02.py" beforeDir="false" />
@@ -53,6 +25,8 @@
       <change beforePath="$PROJECT_DIR$/example_opencv/media/haarcascade_frontalface_default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/media/sample.mp4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rotate.py" beforeDir="false" afterPath="$PROJECT_DIR$/rotate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_matching_pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_matching_pca.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pca.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,12 +65,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\HPR\OneDrive\data\Vision\data" />
       <recent name="C:\Users\HPR\OneDrive\data\Vision" />
+      <recent name="C:\Users\HPR\OneDrive\data\Vision\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_pca">
-    <configuration name="pyramid" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.rotate">
+    <configuration name="affine_transformation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -108,7 +82,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyramid.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/affine_transformation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -203,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_pca" />
         <item itemvalue="Python.rotate" />
+        <item itemvalue="Python.test_pca" />
+        <item itemvalue="Python.affine_transformation" />
         <item itemvalue="Python.template_matching_pca" />
         <item itemvalue="Python.template_matching_nonlib" />
-        <item itemvalue="Python.pyramid" />
       </list>
     </recent_temporary>
   </component>
