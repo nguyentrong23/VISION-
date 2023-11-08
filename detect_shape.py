@@ -1,11 +1,11 @@
 import cv2
-import  imutils as imu
+import imutils
 import numpy as np
 # doc anh va template
-sr0 = cv2.imread("data/data_shape.png")
+sr0 = cv2.imread("data\imgSrc\sample-3.bmp")
 img_src = cv2.cvtColor(sr0,cv2.COLOR_BGR2GRAY)
 
-sr1= cv2.imread("data/template.png")
+sr1= cv2.imread("data/imgSrc/template.bmp")
 img_template = cv2.cvtColor(sr1,cv2.COLOR_BGR2GRAY)
 # list method co the dung khi matching template eval(cv2.TM_CCOEFF),eval(cv2.TM_CCORR_NORMED),eval(cv2.TM_CCORR),eval(cv2.TM_SQDIFF),cv2.TM_SQDIFF_NORMED
 method = eval("cv2.TM_CCOEFF_NORMED")

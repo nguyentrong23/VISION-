@@ -3,13 +3,13 @@ import numpy as np
 import imutils as imu
 
 # doc anh va template
-sr0 = cv2.imread("data/sample_for_1.png")
+sr0 = cv2.imread("data/imgSrc/sample-2.bmp")
 img_src = cv2.cvtColor(sr0,cv2.COLOR_BGR2GRAY)
 blurred = cv2.GaussianBlur(img_src, (3,3), 0)
 edges_src = cv2.Canny(blurred, 100, 150)
 
 
-sr1= cv2.imread("data/sample-for-tets.bmp")
+sr1= cv2.imread("data/imgSrc/template.bmp")
 img_template = cv2.cvtColor(sr1,cv2.COLOR_BGR2GRAY)
 blurred = cv2.GaussianBlur(img_template, (3,3), 0)
 edges_template = cv2.Canny(blurred, 100, 150)
