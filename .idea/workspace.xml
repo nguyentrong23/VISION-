@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ad2e19f-e075-4be7-a6e9-b1bce4584d2c" name="Changes" comment="/">
-      <change afterPath="$PROJECT_DIR$/template_matching_multiObject.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-1.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-10.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-2.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-3.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-4.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-5.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-6.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-7.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-8.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/imgSrc/sample-1-9.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/imgSrc/src/Sample-1/sample-1-1.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/imgSrc/src/Sample-1/sample-1-1.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/imgSrc/src/Sample-1/sample-1-12.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/imgSrc/src/Sample-1/sample-1-12.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/imgSrc/src/Sample-1/sample-1-13.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/imgSrc/src/Sample-1/sample-1-13.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/imgSrc/src/Sample-1/sample-1-17.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/imgSrc/src/Sample-1/sample-1-17.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/imgSrc/teamplate_0_degree.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/detect_shape.py" beforeDir="false" afterPath="$PROJECT_DIR$/detect_shape.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv" beforeDir="false" afterPath="$PROJECT_DIR$/example_opencv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/bai01.py" beforeDir="false" afterPath="$PROJECT_DIR$/example_opencv/crop_img.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/bai02.py" beforeDir="false" />
@@ -33,10 +16,6 @@
       <change beforePath="$PROJECT_DIR$/example_opencv/faces/1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/media/haarcascade_frontalface_default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/media/sample.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotate.py" beforeDir="false" afterPath="$PROJECT_DIR$/rotate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_matching_base_edges.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_matching_base_edges.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template_matching_pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_matching_pca.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pca.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
