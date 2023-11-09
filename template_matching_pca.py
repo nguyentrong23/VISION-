@@ -54,7 +54,7 @@ def fit_angel_pca(contours, hierarchy, src):
 
 
 # Đọc ảnh và tiền xử lý source
-sr0 = cv2.imread("data\imgSrc\src\Sample-1\sample-1-13.bmp")
+sr0 = cv2.imread("data\imgSrc\sample.bmp")
 img_src = cv2.cvtColor(sr0, cv2.COLOR_BGR2GRAY)
 blurred = cv2.GaussianBlur(img_src, (3, 3), 0)
 _, edges_src = cv2.threshold(blurred, 100, 160, cv2.THRESH_BINARY_INV)
