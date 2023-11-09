@@ -16,7 +16,12 @@
       <change beforePath="$PROJECT_DIR$/example_opencv/faces/1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/media/haarcascade_frontalface_default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example_opencv/media/sample.mp4" beforeDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/template_matching_pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/template_matching_pca.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/rotate.py" beforeDir="false" afterPath="$PROJECT_DIR$/rotate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_pca.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_pca.py" afterDir="false" />
+>>>>>>> 9342bb0f74093b221d6a791fc62db8f295dfc668
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +64,11 @@
       <recent name="C:\Users\HPR\OneDrive\data\Vision\data" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Python.template_matching_pca">
+=======
+  <component name="RunManager" selected="Python.test_pca">
+>>>>>>> 9342bb0f74093b221d6a791fc62db8f295dfc668
     <configuration name="affine_transformation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Vision" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,6 +176,12 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
+=======
+        <item itemvalue="Python.test_pca" />
+        <item itemvalue="Python.rotate" />
+        <item itemvalue="Python.affine_transformation" />
+>>>>>>> 9342bb0f74093b221d6a791fc62db8f295dfc668
         <item itemvalue="Python.template_matching_pca" />
         <item itemvalue="Python.detect_shape" />
         <item itemvalue="Python.affine_transformation" />

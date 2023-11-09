@@ -7,8 +7,11 @@ import time
 
 def fit_angel_pca(contours, src):
     min_area = 40000
+<<<<<<< HEAD
     angel_output = []
     mean_output = []
+=======
+>>>>>>> 9342bb0f74093b221d6a791fc62db8f295dfc668
     for idx,cnt in enumerate(contours):
         if cv2.contourArea(cnt) >= min_area:
             cv2.drawContours(src, [cnt], -1, (0, 255, 0), 2, cv2.LINE_AA)
