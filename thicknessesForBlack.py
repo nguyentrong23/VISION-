@@ -28,23 +28,35 @@ def fit_pca(data, src):
     data = np.float32(data)
     mean, eigenvectors = cv2.PCACompute(data, mean=None)
     mean_point = (int(round(mean[0][0])), int(round(mean[0][1])))
-    print(mean, mean_point)
     cv2.circle(src, mean_point, 3, (0, 0, 255), -1)
     scale = 100
     vector1_end = (int(mean_point[0] + eigenvectors[0][0] * scale), int(mean_point[1] + eigenvectors[0][1] * scale))
     cv2.arrowedLine(src, mean_point, vector1_end, (0, 255,255), 1)
+
+    # Find min and max values along the direction of vector1_end
+    min_val = np.min(np.dot(data - mean, eigenvectors.T))
+    max_val = np.max(np.dot(data - mean, eigenvectors.T))
+
+    # Draw a line covering the entire range of data along vector1_end
+    line_start = (int(mean_point[0] + eigenvectors[0][0] * min_val), int(mean_point[1] + eigenvectors[0][1] * min_val))
+    line_end = (int(mean_point[0] + eigenvectors[0][0] * max_val), int(mean_point[1] + eigenvectors[0][1] * max_val))
+    cv2.line(src, line_start, line_end, (255,255, 0), 1)
+
     cv2.imshow('3', src)
-    return vector1_end
+    return vector1_end,min_val,max_val
 
-
+def phandoan(src):
+    return 0
 # Đọc ảnh
 image = cv2.imread('data/Test Images/NG001_lite.jpg')
+image = cv2.pyrUp(image)
+image = cv2.pyrUp(image)
 edges, TopLine, Botline = get_gradient_sobel(image)
-vector_top=fit_pca(TopLine,image)
-vector_bot=fit_pca( Botline,image)
+vector_top,xmin_top, xmax_top=fit_pca(TopLine,image)
+vector_bot,xmin_bot, xmax_bot=fit_pca( Botline,image)
 distance = cv2.norm(vector_top, vector_bot)
 print(f'Khoảng cách giữa hai vector là: {distance}')
-
+print(f'độ phân giải ảnh là: {edges.shape[::]}')
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 

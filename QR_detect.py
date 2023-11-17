@@ -33,5 +33,6 @@ while True:
 
         # Thoát vòng lặp nếu nhấn phím 'q'
         if cv2.waitKey(1) & 0xFF == ord('q'):
+            cv2.imwrite("template_pipe.jpg", frame)
             break
 cv2.destroyAllWindows()

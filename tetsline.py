@@ -22,29 +22,16 @@ def get_gradient_sobel(image):
     data_bottom = np.column_stack((data_bottom[1], data_bottom[0]))
     data_top = np.where(point_bottom != 0)
     data_top = np.column_stack((data_top[1], data_top[0]))
+    cv2.imshow('00', gradient_angle)
+    cv2.imshow('01', gradient_angle_flip)
+    cv2.imshow('1', point_top)
+    cv2.imshow('2', point_bottom)
     return edges, data_top,data_bottom
 
-def fit_pca(data, src):
-    data = np.float32(data)
-    mean, eigenvectors = cv2.PCACompute(data, mean=None)
-    mean_point = (int(round(mean[0][0])), int(round(mean[0][1])))
-    print(mean, mean_point)
-    cv2.circle(src, mean_point, 3, (0, 0, 255), -1)
-    scale = 100
-    vector1_end = (int(mean_point[0] + eigenvectors[0][0] * scale), int(mean_point[1] + eigenvectors[0][1] * scale))
-    cv2.arrowedLine(src, mean_point, vector1_end, (0, 255,255), 1)
-    cv2.imshow('3', src)
-    return vector1_end
-
-
 # Đọc ảnh
-image = cv2.imread('data/Test Images/NG001_lite.jpg')
+image = cv2.imread('data/Test Images/NG01_lite.jpg')
 edges, TopLine, Botline = get_gradient_sobel(image)
-vector_top=fit_pca(TopLine,image)
-vector_bot=fit_pca( Botline,image)
-distance = cv2.norm(vector_top, vector_bot)
-print(f'Khoảng cách giữa hai vector là: {distance}')
-
+print(TopLine)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 

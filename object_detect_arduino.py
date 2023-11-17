@@ -15,7 +15,7 @@ def write_data(x):
     data = arduino.readline()
     return data
 
-image = cv2.imread("example_opencv/media/balloon.png")
+image = cv2.imread( )
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)#chuyen ve anh xam
 ret, thresh = cv2.threshold(gray, 230,255,cv2.THRESH_BINARY)  #dua ve anh nhi phan tu anh xam theo nguong
 # cv2.imshow("B", thresh)  # hien thi test anh nhi phan
